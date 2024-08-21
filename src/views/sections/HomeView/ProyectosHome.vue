@@ -1,6 +1,39 @@
 <script setup lang="ts">
-import MtCard from "@/components/MtCard.vue";
+import ProjectCard from "@/components/ProjectCard.vue";
+import type { ProjectCardEntity } from "@/Entities/ProjectCardEntity";
+import { UUID } from "crypto";
 
+
+const projects: ProjectCardEntity[] = [
+    {
+        id: crypto.randomUUID(),
+        title: "Proyecto 1",
+        url: "https://www.google.com",
+        text: "Is this real gangsta love.",
+        image: "https://via.placeholder.com/150"
+    },
+    {
+        id: crypto.randomUUID(),
+        title: "Proyecto 2",
+        url: "https://www.google.com",
+        text: "Is this real gangsta love.",
+        image: "https://via.placeholder.com/150"
+    },
+    {
+        id: crypto.randomUUID(),
+        title: "Proyecto 3",
+        url: "https://www.google.com",
+        text: "Is this real gangsta love.",
+        image: "https://via.placeholder.com/150"
+    },
+    {
+        id: crypto.randomUUID(),
+        title: "Proyecto 4",
+        url: "https://www.google.com",
+        text: "Is this real gangsta love.",
+        image: "https://via.placeholder.com/150"
+    }
+];
 
 </script>
 <template>
@@ -9,7 +42,8 @@ import MtCard from "@/components/MtCard.vue";
             <h2>Proyectos</h2>
             <p>Estos son algunos de los proyectos en los que he trabajado:</p>
             <div class="proyect-cards">
-                <mt-card title="Proyecto 1" url="https://www.google.com" text="Is this real gangsta love." image="https://via.placeholder.com/150"></mt-card>
+                <project-card v-for="project in projects" :key="project.id" :title="project.title" :url="project.url"
+                              :text="project.text" :image="project.image" />
             </div>
         </div>
     </section>

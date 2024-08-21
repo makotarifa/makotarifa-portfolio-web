@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import MtButton from "@/components/MtButton.vue";
+import Button from "primevue/button";
 
 const props = defineProps({
     title: String,
@@ -45,7 +45,7 @@ const altText = computed(() => `Imagen de ${props.title}`);
                 <p>{{ text }}</p>
             </div>
 
-            <mt-button text="Ver proyecto" :url="url" :size="size" />
+            <Button :label="'Ver proyecto'" :class="size" :href="url" />
         </div>
     </div>
 </template>
@@ -55,9 +55,7 @@ const altText = computed(() => `Imagen de ${props.title}`);
     border: 1px solid var(--card-border);
     transition: box-shadow 0.3s ease, border 0.3s ease;
     display: flex;
-    min-width: 300px;
-    max-width: 500px;
-    min-height: 250px;
+    width: 100%;
 }
 
 #mt-card .mt-card-img .img-controller-inverse {
@@ -79,5 +77,4 @@ const altText = computed(() => `Imagen de ${props.title}`);
     flex-direction: column;
     justify-content: space-between;
 }
-
 </style>

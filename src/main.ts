@@ -1,4 +1,7 @@
-import "./assets/main.css";
+import "@/assets/main.css";
+import "primeicons/primeicons.css";
+import PrimeVue from "primevue/config";
+import Aura from "@primevue/themes/aura";
 
 import { createApp } from "vue";
 import { createPinia } from "pinia";
@@ -14,3 +17,8 @@ app.use(router);
 app.use(VueLazyload);
 
 app.mount("#app");
+app.use(PrimeVue, {
+    theme: {
+        preset: Aura
+    }
+});

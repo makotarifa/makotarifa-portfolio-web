@@ -20,21 +20,25 @@ header {
     z-index: 1;
     position: sticky;
     top: 0;
-    backdrop-filter: blur(10px); /* Aplica un efecto de desenfoque */
+    backdrop-filter: blur(10px);
+    width: 100%;
 }
 
 nav {
-    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     list-style: none;
-}
-
-nav ul li {
-    margin: 0 0.5rem;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
 }
 
 nav ul li a {
@@ -46,6 +50,6 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #555; /* Placeholder color */
 }
 </style>
