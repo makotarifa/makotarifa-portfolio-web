@@ -8,10 +8,14 @@
             <h2>Sobre Mi</h2>
             <div class="center">
                 <div class="img-controller main-image">
-                    <img src="../../../assets/images/developer.jpg" alt="Foto de Ángel">
+                    <img src="@/assets/images/bichodurmiendo.webp" alt="Foto de Ángel">
                 </div>
             </div>
-            <p>¡Hola! Soy Ángel y soy un desarrollador web. Me encanta programar y crear aplicaciones web. Soy un apasionado de la tecnología y me encanta aprender cosas nuevas. Me encanta trabajar con JavaScript, Vue.js, Node.js, MongoDB, y otras tecnologías web. ¡Gracias por visitar mi sitio web!</p>
+            <article>
+                <p>Amante de la informática desde pequeño, me dedicaba a trastear con los ordenadores de mi casa y a
+                    investigar cómo funcionaban las cosas. Con el tiempo, me gradué como tecnico de Sistema Microinformáticos y Redes, pero decidí
+                    seguir estudiando y me gradué en la FP Superior de Desarrollo de Aplicaciones Multiplataformas. Actualmente me dedico al desarrollo de software tanto web como móvil.</p>
+            </article>
         </div>
     </section>
 </template>
@@ -38,7 +42,7 @@
     }
 
     .main-image {
-        width: 20%;
+        width: 30%;
         min-width: 250px;
         max-width: 450px;
         transition: transform 0.4s;

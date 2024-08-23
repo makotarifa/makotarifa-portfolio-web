@@ -17,7 +17,7 @@ import Button from "primevue/button";
                 </section>
             </div>
             <div class="img-controller right-main">
-                <img src="../../../assets/images/developer.jpg" alt="Software Developer" />
+                <img src="@/assets/images/developer.jpg" alt="Software Developer" />
             </div>
         </div>
         <div class="download-cv">

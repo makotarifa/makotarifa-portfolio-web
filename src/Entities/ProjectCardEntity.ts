@@ -4,4 +4,10 @@ export interface ProjectCardEntity {
     url: string;
     text: string;
     image: string;
+    icons: IconEntity[];
+}
+
+export interface IconEntity {
+    name: string;
+    icon: string;
 }

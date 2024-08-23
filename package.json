@@ -17,6 +17,7 @@
     "@popperjs/core": "^2.11.8",
     "@primevue/themes": "^4.0.4",
     "bootstrap": "^5.3.3",
+    "devicon": "^2.16.0",
     "pinia": "^2.1.7",
     "primeicons": "^7.0.0",
     "primevue": "^4.0.4",

@@ -1,5 +1,6 @@
 import "@/assets/main.css";
 import "primeicons/primeicons.css";
+import "devicon/devicon.min.css";
 import PrimeVue from "primevue/config";
 import Aura from "@primevue/themes/aura";
 
