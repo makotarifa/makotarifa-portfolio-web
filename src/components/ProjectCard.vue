@@ -15,11 +15,6 @@ const props = defineProps({
         type: String,
         default: "#ffffff"
     },
-    size: {
-        type: String,
-        default: "small",
-        validator: (value: string) => ["small", "medium", "large"].includes(value)
-    }
 });
 
 const cardStyle = computed(() => ({
@@ -41,11 +36,11 @@ const altText = computed(() => `Imagen de ${props.title}`);
         </div>
         <div class="mt-card-content">
             <div>
-                <h3>{{ title }}</h3>
+                <h5>{{ title }}</h5>
                 <p>{{ text }}</p>
             </div>
 
-            <Button :label="'Ver proyecto'" :class="size" :href="url" />
+            <Button :label="'Ver proyecto'" :href="url" size="small"/>
         </div>
     </div>
 </template>

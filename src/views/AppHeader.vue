@@ -8,9 +8,10 @@
             <ul>
                 <li><a href="/#main-section">Inicio</a></li>
                 <li><a href="/#sobre-mi">Sobre Mí</a></li>
-                <li><RouterLink to="/proyectos">Proyectos</RouterLink></li>
-                <li><RouterLink to="/experiencia">Experiencia</RouterLink></li>
-                <li><RouterLink to="/contacto">Contacto</RouterLink></li>
+                <li><a href="/#proyectos">Proyectos</a></li>
+                <li><a href="/#experiencia">Experiencia</a></li>
+                <li><a href="/#tecnologias">Tecnologias</a></li>
+                <li><a href="/#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -18,7 +19,7 @@
 <style scoped>
 header {
     z-index: 1;
-    position: sticky;
+    position: fixed;
     top: 0;
     backdrop-filter: blur(10px);
     width: 100%;

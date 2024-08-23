@@ -6,9 +6,16 @@ import Proyectos from "@/views/sections/HomeView/ProyectosHome.vue";
 </script>
 
 <template>
-    <main>
+    <main class="home-view">
         <main-section />
         <sobre-mi />
         <proyectos />
     </main>
 </template>
+
+<style scoped>
+.home-view{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+</style>

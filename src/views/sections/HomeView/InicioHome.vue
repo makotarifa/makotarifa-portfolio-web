@@ -7,13 +7,13 @@ import Button from "primevue/button";
         <div class="main-content">
             <div class="left-main">
                 <section>
-                    <h3>Software Developer</h3>
+                    <h3>Full Stack Developer</h3>
                     <h1>Ángel "Mako" Morando</h1>
                     <p>Desarrollador de Software en tecnologías web y móviles.</p>
                 </section>
                 <section class="social-buttons">
-                    <Button label="LinkedIn" icon="pi pi-linkedin" iconPos="left" />
-                    <Button label="GitHub" icon="pi pi-github" iconPos="left" />
+                    <Button label="LinkedIn" icon="pi pi-linkedin" iconPos="left" size="small"/>
+                    <Button label="GitHub" icon="pi pi-github" iconPos="left" size="small"/>
                 </section>
             </div>
             <div class="img-controller right-main">
@@ -21,7 +21,7 @@ import Button from "primevue/button";
             </div>
         </div>
         <div class="download-cv">
-            <Button label="Descargar CV" icon="pi pi-download" iconPos="left" class="p-button-sm" />
+            <Button label="Descargar CV" icon="pi pi-download" iconPos="left" />
         </div>
     </section>
 </template>
