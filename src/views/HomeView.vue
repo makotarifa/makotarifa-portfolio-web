@@ -6,14 +6,20 @@ import Proyectos from "@/views/sections/HomeView/ProyectosHome.vue";
 </script>
 
 <template>
-    <main class="home-view">
-        <main-section />
-        <sobre-mi />
-        <proyectos />
+    <main>
+        <div class="home-view">
+            <main-section />
+            <sobre-mi />
+            <proyectos />
+        </div>
     </main>
 </template>
 
 <style scoped>
+main {
+    background: radial-gradient(circle, rgb(22, 43, 156) 0%, rgb(0, 6, 19) 70%);
+}
+
 .home-view{
     margin: 0 auto;
     max-width: 1200px;

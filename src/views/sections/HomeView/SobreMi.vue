@@ -14,7 +14,7 @@
             <article>
                 <p>Amante de la informática desde pequeño, me dedicaba a trastear con los ordenadores de mi casa y a
                     investigar cómo funcionaban las cosas. Con el tiempo, me gradué como tecnico de Sistema Microinformáticos y Redes, pero decidí
-                    seguir estudiando y me gradué en la FP Superior de Desarrollo de Aplicaciones Multiplataformas. Actualmente me dedico al desarrollo de software tanto web como móvil.</p>
+                    seguir estudiando hasta graduarme en la FP Superior de Desarrollo de Aplicaciones Multiplataformas. Actualmente me dedico al desarrollo de software tanto web como móvil.</p>
             </article>
         </div>
     </section>

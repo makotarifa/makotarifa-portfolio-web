@@ -131,7 +131,7 @@ const projects: ProjectCardEntity[] = [
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(545px, 1fr));
     grid-auto-rows: 1fr; /* Ensures all rows have the same height */
     gap: 1rem;
 

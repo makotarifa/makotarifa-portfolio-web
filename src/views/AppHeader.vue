@@ -5,6 +5,7 @@
 <template>
     <header>
         <nav>
+            <h2>mako</h2>
             <ul>
                 <li><a href="/#main-section">Inicio</a></li>
                 <li><a href="/#sobre-mi">Sobre Mí</a></li>
@@ -23,14 +24,20 @@ header {
     top: 0;
     backdrop-filter: blur(10px);
     width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 4rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 nav {
     width: 100%;
+    max-width: 1200px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 60px;
+
 }
 
 nav ul {
@@ -39,7 +46,7 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 20px;
+    gap: 10px;
 }
 
 nav ul li a {
