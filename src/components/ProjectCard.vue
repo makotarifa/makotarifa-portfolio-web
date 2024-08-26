@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { computed } from "vue";
 import Button from "primevue/button";
 import Card from "primevue/card";
 import type { ProjectEntity } from "@/Entities/ProjectEntity";
@@ -60,7 +59,8 @@ const navigateToProject = () => {
     }
 
     .card-content {
-        height: 25vh;
+        height: 15vh;
+        min-height: 200px;
     }
 
     .card-footer {
