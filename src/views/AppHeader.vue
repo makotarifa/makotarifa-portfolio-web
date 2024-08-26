@@ -9,8 +9,8 @@
             <ul>
                 <li><a href="/#main-section">Inicio</a></li>
                 <li><a href="/#sobre-mi">Sobre Mí</a></li>
-                <li><a href="/#proyectos">Proyectos</a></li>
                 <li><a href="/#experiencia">Experiencia</a></li>
+                <li><a href="/#proyectos">Proyectos</a></li>
                 <li><a href="/#tecnologias">Tecnologias</a></li>
                 <li><a href="/#contacto">Contacto</a></li>
             </ul>

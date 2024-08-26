@@ -1,49 +1,40 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import Button from "primevue/button";
-import type { IconEntity } from "@/Entities/ProjectCardEntity";
+import Card from "primevue/card";
+import type { ProjectEntity } from "@/Entities/ProjectEntity";
 
 const props = defineProps<{
-    title: string;
-    text: string;
-    url: string;
-    image: string;
-    icons: IconEntity[];
+    project: ProjectEntity;
     backgroundColor?: string;
     textColor?: string;
 }>();
 
-const cardStyle = computed(() => ({
-    backgroundColor: props.backgroundColor || "#2c3e50",
-    color: props.textColor || "#ffffff",
-    boxShadow: "var(--card-shadow)",
-    borderRadius: "var(--card-border-radius)"
-}));
-
-const altText = computed(() => `Imagen de ${props.title}`);
+const altText = computed(() => `Imagen de ${props.project.title}`);
 </script>
 
 <template>
-    <div id="mt-card" :style="cardStyle">
-        <div class="mt-card-img">
-            <div class="img-controller-inverse">
-                <img :src="image" :alt="altText">
-            </div>
-        </div>
-        <div class="mt-card-content">
+    <Card id="mt-card"
+          :style="`background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(${props.project.image}) center/cover; opacity: 0.8`">
+        <template #title>
             <div>
-                <h5>{{ title }}</h5>
-                <p>{{ text }}</p>
+                <h5>{{ project.title }}</h5>
             </div>
-
-            <div>
+        </template>
+        <template #content>
+            <div class="card-content">
+                <p>{{ project.text }}</p>
+            </div>
+        </template>
+        <template #footer>
+            <div class="card-footer">
                 <div class="tech-icons">
-                    <i :title="icon.name" v-for="icon in props.icons" :key="icon.name" :class="icon.icon" ></i>
+                    <i :title="icon.name" v-for="icon in project.icons" :key="icon.name" :class="icon.icon"></i>
                 </div>
-                <Button class="pj-button" :label="'Ver proyecto'" :href="url" size="small"/>
+                <Button class="pj-button" :label="'Ver proyecto'" :href="project.url" size="small" />
             </div>
-        </div>
-    </div>
+        </template>
+    </Card>
 </template>
 
 <style scoped>
@@ -51,11 +42,9 @@ const altText = computed(() => `Imagen de ${props.title}`);
     border: 1px solid var(--card-border);
     transition: box-shadow 0.3s ease, border 0.3s ease;
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el footer esté en la parte inferior */
 
-    >div {
-        width: 100%;
-    }
 
     .tech-icons {
         display: flex;
@@ -66,25 +55,14 @@ const altText = computed(() => `Imagen de ${props.title}`);
         }
     }
 
+    .card-content {
+        height: 25vh;
+    }
 
-    .mt-card-content {
-        padding: 1rem;
+    .card-footer {
         display: flex;
         justify-content: space-between;
-        flex-direction: column;
-        gap: 10px;
-
-        >div:nth-child(1) {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        > div:nth-child(2) {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        align-items: center;
     }
 
     .pj-button {
@@ -92,19 +70,8 @@ const altText = computed(() => `Imagen de ${props.title}`);
     }
 }
 
-#mt-card .mt-card-img .img-controller-inverse {
-    height: 100%
-}
-
-.mt-card-img img {
-    border-radius: var(--card-border-radius);
-}
-
 #mt-card:hover {
     box-shadow: var(--card-shadow-hover);
     border-color: var(--card-border-hover);
 }
-
-
-
 </style>

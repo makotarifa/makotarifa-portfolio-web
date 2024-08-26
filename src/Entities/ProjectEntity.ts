@@ -1,4 +1,4 @@
-export interface ProjectCardEntity {
+export interface ProjectEntity {
     id: string;
     title: string;
     url: string;

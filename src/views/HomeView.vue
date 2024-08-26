@@ -2,6 +2,7 @@
 import MainSection from "@/views/sections/HomeView/InicioHome.vue";
 import SobreMi from "@/views/sections/HomeView/SobreMi.vue";
 import Proyectos from "@/views/sections/HomeView/ProyectosHome.vue";
+import ExperienciaHome from "@/views/sections/HomeView/ExperienciaHome.vue";
 
 </script>
 
@@ -9,6 +10,7 @@ import Proyectos from "@/views/sections/HomeView/ProyectosHome.vue";
     <main>
         <div class="home-view">
             <main-section />
+            <experiencia-home />
             <sobre-mi />
             <proyectos />
         </div>

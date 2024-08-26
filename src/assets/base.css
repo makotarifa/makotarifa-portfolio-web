@@ -43,7 +43,7 @@
     --card-border-hover: var(--vt-c-divider-light-1);
     --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     --card-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --card-border-radius: 24px;
+    --normal-border-radius: 12px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -64,7 +64,7 @@
     --card-border-hover: var(--vt-c-divider-dark-1);
     --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     --card-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --card-border-radius: 24px;
+    --card-border-radius: var(--normal-border-radius);
 
   }
 }

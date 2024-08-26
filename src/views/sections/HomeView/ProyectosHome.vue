@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import ProjectCard from "@/components/ProjectCard.vue";
-import type { ProjectCardEntity } from "@/Entities/ProjectCardEntity";
+import type { ProjectEntity } from "@/Entities/ProjectEntity";
 
 
-const projects: ProjectCardEntity[] = [
+const projects: ProjectEntity[] = [
     {
         id: crypto.randomUUID(),
         title: "AyudaT Technical Test",
@@ -98,8 +98,7 @@ const projects: ProjectCardEntity[] = [
             <h2>Proyectos</h2>
             <p>Estos son algunos de los proyectos en los que he trabajado:</p>
             <div class="cards">
-                <project-card class="inside-card" v-for="project in projects" :key="project.id" :title="project.title" :url="project.url"
-                              :text="project.text" :icons="project.icons" :image="project.image" />
+                <project-card class="inside-card" v-for="project in projects" :key="project.id" :project="project" />
             </div>
         </div>
     </section>
@@ -133,7 +132,7 @@ const projects: ProjectCardEntity[] = [
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(545px, 1fr));
     grid-auto-rows: 1fr; /* Ensures all rows have the same height */
-    gap: 1rem;
+    gap: 0.5rem;
 
     .cards:nth-child(2n) .mt-card-img {
         order: 2;
