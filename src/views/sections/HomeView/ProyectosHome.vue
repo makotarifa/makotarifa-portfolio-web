@@ -9,7 +9,7 @@ const projects: ProjectEntity[] = [
         title: "AyudaT Technical Test",
         url: "https://www.google.com",
         text: "Prueba tecnica de front-end realizada para la empresa AyudaT.",
-        image: "public/images/projects/ayudat.jpg",
+        image: "/images/projects/ayudat.jpg",
         icons: [
             {
                 name: "Vue",
@@ -35,7 +35,7 @@ const projects: ProjectEntity[] = [
         title: "PokeTale",
         url: "https://github.com/makotarifa",
         text: "Juego con tematica de pokemon, donde el jugador se enfrenta a los pokemon salvajes en hordas y tiene que sobrevivir el mayor tiempo posible.",
-        image: "public/images/projects/poketale.jpg",
+        image: "/images/projects/poketale.jpg",
         icons: [
             {
                 name: "Unity",
@@ -56,7 +56,7 @@ const projects: ProjectEntity[] = [
         title: "Gestor de Alumnos",
         url: "https://github.com/makotarifa/GestorAlumnos",
         text: "Proyecto en MAUI para gestionar alumnos y sus calificaciones, ademas de poder exportar los datos a un archivo PDF con el formato del documento de prácticas de la Junta de Andalucia.",
-        image: "/public/images/projects/gestor-cursos.jpg",
+        image: "/images/projects/gestor-cursos.jpg",
         icons: [
             {
                 name: "MAUI",
@@ -74,10 +74,10 @@ const projects: ProjectEntity[] = [
     },
     {
         id: crypto.randomUUID(),
-        title: "SFTL",
+        title: "SFLT",
         url: "https://www.google.com",
         text: "Maquetación de un front-end para una empresa naviera ficticia. Realizada en Android Studio con Kotlin.",
-        image: "public/images/projects/sftl.jpg",
+        image: "/images/projects/SFTL.jpg",
         icons: [
             {
                 name: "Android",
