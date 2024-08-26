@@ -133,9 +133,5 @@ const projects: ProjectEntity[] = [
     grid-template-columns: repeat(auto-fill, minmax(545px, 1fr));
     grid-auto-rows: 1fr; /* Ensures all rows have the same height */
     gap: 0.5rem;
-
-    .cards:nth-child(2n) .mt-card-img {
-        order: 2;
-    }
 }
 </style>
