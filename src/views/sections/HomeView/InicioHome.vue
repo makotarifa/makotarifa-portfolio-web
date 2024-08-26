@@ -64,17 +64,18 @@ import Button from "primevue/button";
 }
 
 h3 {
-    color: #555555;
     font-size: 1.5rem;
 }
 
 h1 {
-    color: #aeff53;
     font-size: 3rem;
+    background: linear-gradient(to right, var(--main-gradient-text-color), var(--main-gradient-text-color-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 p {
-    color: #555555;
     font-size: 1.25rem;
 }
 
