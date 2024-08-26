@@ -30,7 +30,7 @@
 
     #sobre-mi div {
         padding: 1rem 2rem;
-        max-width: 1100px;
+        width: 100%;
     }
 
     #sobre-mi h2 {

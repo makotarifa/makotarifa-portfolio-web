@@ -16,9 +16,9 @@ import Button from "primevue/button";
                     <Button label="GitHub" icon="pi pi-github" iconPos="left" size="small"/>
                 </section>
             </div>
-            <div class="img-controller right-main">
-                <img src="@/assets/images/developer.jpg" alt="Software Developer" />
-            </div>
+                <div class="img-controller right-main">
+                    <img src="@/assets/images/developer.jpg" alt="Software Developer" />
+                </div>
         </div>
         <div class="download-cv">
             <Button label="Descargar CV" icon="pi pi-download" iconPos="left" />
@@ -37,23 +37,29 @@ import Button from "primevue/button";
 
 .main-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-}
+    height: 100%;
 
-.main-content div {
-    padding: 0 1rem;
+    > div:last-child{
+        flex-grow: 1;
+        padding: 0 1rem;
+    }
+
+    > div:first-child {
+        flex-grow: 20;
+    }
+
 }
 
 .img-controller {
-    width: 25%;
+    width: 30%;
     min-width: 300px;
-    max-width: 450px;
+    max-width: 550px;
 }
 
 .right-main img {
-    padding: 2rem;
     border-radius: 50%;
 }
 

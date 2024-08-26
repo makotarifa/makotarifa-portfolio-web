@@ -6,7 +6,7 @@ import type { ExperienceEntity } from "@/Entities/ExperienceEntity";
 const jobExperiences = ref<ExperienceEntity[]>([
     {
         title: "Software Developer Intern",
-        image: "https://via.placeholder.com/150",
+        image: "https://www.elestrechodigital.com/wp-content/uploads/2023/06/maersk-contenedor-arcoiris-2023-1.jpg",
         company: "A.P. Moller - Maersk",
         startDate: "04/2024",
         endDate: "06/2024",
@@ -14,16 +14,16 @@ const jobExperiences = ref<ExperienceEntity[]>([
     },
     {
         title: "Junior System Administrator",
-        image: "https://via.placeholder.com/150",
-        company: "FRS Iberia",
+        image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/e9/34/7b/tarifa-jet.jpg?w=1200&h=900&s=1",
+        company: "FRS Iberia S.L.U.",
         startDate: "06/2023",
         endDate: "09/2023",
         description: "Created responsive web designs and improved user experience."
     },
     {
         title: "IT Assistant",
-        image: "https://via.placeholder.com/150",
-        company: "FRS Iberia",
+        image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/e9/34/7b/tarifa-jet.jpg?w=1200&h=900&s=1",
+        company: "FRS Iberia S.L.U.",
         startDate: "06/2022",
         endDate: "09/2022",
         description: "Created responsive web designs and improved user experience."

@@ -10,12 +10,15 @@ const props = defineProps<{
     textColor?: string;
 }>();
 
-const altText = computed(() => `Imagen de ${props.project.title}`);
+const navigateToProject = () => {
+    window.open(props.project.url, "_blank");
+};
+
 </script>
 
 <template>
     <Card id="mt-card"
-          :style="`background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(${props.project.image}) center/cover; opacity: 0.8`">
+          :style="`background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(${props.project.image}) center/cover`">
         <template #title>
             <div>
                 <h5>{{ project.title }}</h5>
@@ -31,7 +34,7 @@ const altText = computed(() => `Imagen de ${props.project.title}`);
                 <div class="tech-icons">
                     <i :title="icon.name" v-for="icon in project.icons" :key="icon.name" :class="icon.icon"></i>
                 </div>
-                <Button class="pj-button" :label="'Ver proyecto'" :href="project.url" size="small" />
+                <Button class="pj-button" :label="'Ver proyecto'" @click="navigateToProject" size="small" />
             </div>
         </template>
     </Card>
@@ -52,6 +55,7 @@ const altText = computed(() => `Imagen de ${props.project.title}`);
 
         i {
             font-size: 1.5rem;
+            filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8));
         }
     }
 
@@ -67,6 +71,10 @@ const altText = computed(() => `Imagen de ${props.project.title}`);
 
     .pj-button {
         max-width: 150px;
+    }
+
+    h5, p {
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
     }
 }
 

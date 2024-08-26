@@ -38,6 +38,7 @@ const props = defineProps<{
 }
 
 .job-card {
+    color: #fff; /*TODO: Change the color */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -46,12 +47,19 @@ const props = defineProps<{
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+
+    h3, h4, p {
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    i {
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8));
+    }
 }
 
 .job-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(${props.job.image}) center/cover;
 }
 
 .card-title {
@@ -78,7 +86,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 .card-tags {
