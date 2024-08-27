@@ -9,7 +9,20 @@ const router = createRouter({
             name: "home",
             component: HomeView
         }
-    ]
+    ],
+    scrollBehavior(to, from, savedPosition) {
+        if (to.hash) {
+            const element = document.querySelector(to.hash);
+            if (element) {
+                console.log("Element found:", element);
+                return {
+                    el: to.hash,
+                    behavior: "smooth"
+                };
+            }
+        }
+        return { x: 0, y: 0 };
+    }
 });
 
 export default router;

@@ -10,7 +10,7 @@ const jobExperiences = ref<ExperienceEntity[]>([
         company: "A.P. Moller - Maersk",
         startDate: "04/2024",
         endDate: "06/2024",
-        description: "Developed and maintained web applications using Vue.js and TypeScript."
+        description: "Durante mi periodo de practicas para obtener mi titulacion de Desarrollo de Aplicaciones Multiplataforma, tuve la oportunidad de trabajar en el departamento de programación de Maersk, donde desarrolle una aplicacion web asistente para la gestión de contenedores."
     },
     {
         title: "Junior System Administrator",
@@ -18,7 +18,7 @@ const jobExperiences = ref<ExperienceEntity[]>([
         company: "FRS Iberia S.L.U.",
         startDate: "06/2023",
         endDate: "09/2023",
-        description: "Created responsive web designs and improved user experience."
+        description: "En el descanso entre el primer y segundo año de mi ciclo formativo de grado superior, volví a trabajar en el departamento de IT de FRS Iberia, donde me encargué de la administración de sistemas y redes."
     },
     {
         title: "IT Assistant",
@@ -26,7 +26,7 @@ const jobExperiences = ref<ExperienceEntity[]>([
         company: "FRS Iberia S.L.U.",
         startDate: "06/2022",
         endDate: "09/2022",
-        description: "Created responsive web designs and improved user experience."
+        description: "Tras obtener mi titulación de Sistema Microinformáticos y Redes, trabajé en el departamento de IT de FRS Iberia, donde me encargue de la resolución de incidencias, mantenimiento de equipos y redes."
     }
 
 ]);
@@ -34,7 +34,7 @@ const jobExperiences = ref<ExperienceEntity[]>([
 </script>
 
 <template>
-    <section class="laboral-exp">
+    <section id="exp-lab">
         <h2>Experiencia Laboral</h2>
         <div v-if="jobExperiences.length" class="experience-cards">
             <experience-card v-for="job in jobExperiences" :key="job.title" :job="job" />
@@ -44,13 +44,6 @@ const jobExperiences = ref<ExperienceEntity[]>([
 </template>
 
 <style scoped>
-.laboral-exp {
-    margin: 0 auto;
-    padding: 2rem;
-    border-radius: 8px;
-    animation: fadeIn 1s ease-in-out;
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -59,6 +52,21 @@ const jobExperiences = ref<ExperienceEntity[]>([
         opacity: 1;
     }
 }
+
+#exp-lab {
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 8px;
+    animation: fadeIn 1s ease-in-out;
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
 
 .experience-cards {
     display: grid;

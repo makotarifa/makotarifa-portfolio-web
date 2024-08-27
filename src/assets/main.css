@@ -27,6 +27,11 @@ h1 {
   letter-spacing: 0.2px;
 }
 
+h2 {
+    font-size: 2.5rem;
+    line-height: 40px;
+}
+
 h3 {
   font-size: 3rem;
 }
@@ -45,6 +50,11 @@ p {
   color: var(--main-text-color);
 }
 
+.home-view h2{
+  background: linear-gradient(to right, var(--main-gradient-text-color), var(--main-gradient-text-color-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 
 

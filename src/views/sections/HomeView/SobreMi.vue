@@ -3,14 +3,14 @@
 </script>
 
 <template>
-    <section id="sobre-mi">
+    <section id="about-me">
         <div>
             <h2>Sobre Mi</h2>
-            <div class="center">
-                <div class="img-controller main-image">
-                    <img src="@/assets/images/bichodurmiendo.webp" alt="Foto de Ángel">
-                </div>
-            </div>
+<!--            <div class="center">-->
+<!--                <div class="img-controller main-image">-->
+<!--                    <img src="@/assets/images/bichodurmiendo.webp" alt="Foto de Ángel">-->
+<!--                </div>-->
+<!--            </div>-->
             <article>
                 <p>Amante de la informática desde pequeño, me dedicaba a trastear con los ordenadores de mi casa y a
                     investigar cómo funcionaban las cosas. Con el tiempo, me gradué como tecnico de Sistema Microinformáticos y Redes, pero decidí
@@ -21,26 +21,27 @@
 </template>
 
 <style scoped>
-    #sobre-mi {
+    #about-me {
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
     }
 
-    #sobre-mi div {
+    div {
         padding: 1rem 2rem;
         width: 100%;
     }
 
-    #sobre-mi h2 {
+    h2 {
         margin-bottom: 1rem;
     }
 
-    #sobre-mi p {
+    p {
         font-size: 1.2rem;
     }
 
+    /*
     .main-image {
         width: 30%;
         min-width: 250px;
@@ -63,5 +64,6 @@
         justify-content: center;
         align-items: center;
     }
+    */
 
 </style>

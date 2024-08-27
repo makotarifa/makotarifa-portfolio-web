@@ -8,7 +8,7 @@ const projects: ProjectEntity[] = [
         id: crypto.randomUUID(),
         title: "AyudaT Technical Test",
         url: "https://www.google.com",
-        text: "Prueba tecnica de front-end realizada para la empresa AyudaT.",
+        text: "Prueba tecnica de front-end realizada para la empresa AyudaT cuyo objetivo era maquetar una landing page.",
         image: "/images/projects/ayudat.jpg",
         icons: [
             {
@@ -93,7 +93,7 @@ const projects: ProjectEntity[] = [
 
 </script>
 <template>
-    <section id="project-list">
+    <section id="projects">
         <div>
             <h2>Proyectos</h2>
             <p>Estos son algunos de los proyectos en los que he trabajado:</p>
@@ -105,7 +105,7 @@ const projects: ProjectEntity[] = [
 </template>
 
 <style scoped>
-#project-list {
+#projects {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +130,7 @@ const projects: ProjectEntity[] = [
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-auto-rows: 1fr; /* Ensures all rows have the same height */
     gap: 0.5rem;
 }

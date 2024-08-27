@@ -30,6 +30,7 @@
     --spring-green: #37ff8bff;
     --light-spring-green: #aeffd9;
     --white-smoke: #f3f3f3;
+    --sunset-yellow: #ffc857;
 
     /* Complementary and analogous colors */
     --complementary-rich-black: #ffecf2; /* Light pink */
@@ -81,6 +82,7 @@
     --main-gradient-bg-color-2: var(--international-klein-blue);
 
     /* Gradient text */
+    --main-section-h3-color: var(--sunset-yellow);
     --main-gradient-text-color: var(--moonstone);
     --main-gradient-text-color-2: var(--spring-green);
 

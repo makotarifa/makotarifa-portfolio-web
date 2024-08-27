@@ -3,12 +3,12 @@ import Button from "primevue/button";
 </script>
 
 <template>
-    <section id="main-section">
+    <section id="start">
         <div class="main-content">
             <div class="left-main">
                 <section>
                     <h3>Full Stack Developer</h3>
-                    <h1>Ángel "Mako" Morando</h1>
+                    <h1>Ángel <span class="highlight">"Mako"</span> Morando</h1>
                     <p>Desarrollador de Software en tecnologías web y móviles.</p>
                 </section>
                 <section class="social-buttons">
@@ -27,7 +27,7 @@ import Button from "primevue/button";
 </template>
 
 <style scoped>
-#main-section {
+#start {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,15 +64,21 @@ import Button from "primevue/button";
 }
 
 h3 {
+    color: var(--sunset-yellow);
     font-size: 1.5rem;
 }
 
 h1 {
     font-size: 3rem;
-    background: linear-gradient(to right, var(--main-gradient-text-color), var(--main-gradient-text-color-2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--main-text-color);
     display: inline-block;
+
+    .highlight {
+        font-weight: inherit;
+        background: linear-gradient(to right, var(--main-gradient-text-color), var(--main-gradient-text-color-2));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 p {
@@ -93,5 +99,24 @@ p {
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
+}
+
+@media (max-width: 730px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-controller {
+        margin: 1.5rem 0;
+    }
+
+    .left-main {
+        order: 2;
+    }
+
+    .right-main {
+        order: 1;
+    }
 }
 </style>

@@ -1,4 +1,71 @@
 <script setup lang="ts">
+import { onBeforeUnmount, onMounted, ref } from "vue";
+import { useRouter } from "vue-router";
+import Menu from "primevue/menu";
+import Button from "primevue/button";
+import { RouterLink } from "vue-router";
+import type { MenuItem } from "primevue/menuitem";
+
+
+const router = useRouter();
+const isDropdownVisible = ref(false);
+const maxWidthForDropdown = 930;
+const menu = ref();
+
+const toggle = (event: any) => {
+    menu.value.toggle(event);
+};
+
+const menuOptions: MenuItem[] = [
+    {
+        label: "Inicio",
+        key: "main-section",
+        command: () => {
+            router.push("/#start");
+        }
+    },
+    {
+        label: "Experiencia",
+        key: "experiencia",
+        command: () => {
+            router.push("/#exp-lab");
+        }
+    },
+    {
+        label: "Sobre Mí",
+        key: "sobre-mi",
+        command: () => {
+            router.push("/#about-me");
+        }
+    },
+    {
+        label: "Proyectos",
+        key: "proyectos",
+        command: () => {
+            router.push("/#projects");
+        }
+    },
+    {
+        label: "Contacto",
+        key: "contacto",
+        command: () => {
+            router.push("/#contact");
+        }
+    }
+];
+
+const checkDropdownVisibility = () => {
+    isDropdownVisible.value = window.innerWidth <= maxWidthForDropdown;
+};
+
+onMounted(() => {
+    window.addEventListener("resize", checkDropdownVisibility);
+    checkDropdownVisibility();
+});
+
+onBeforeUnmount(() => {
+    window.removeEventListener("resize", checkDropdownVisibility);
+});
 
 </script>
 
@@ -6,14 +73,16 @@
     <header>
         <nav>
             <h2>mako</h2>
-            <ul>
-                <li><a href="/#main-section">Inicio</a></li>
-                <li><a href="/#sobre-mi">Sobre Mí</a></li>
-                <li><a href="/#experiencia">Experiencia</a></li>
-                <li><a href="/#proyectos">Proyectos</a></li>
-                <li><a href="/#tecnologias">Tecnologias</a></li>
-                <li><a href="/#contacto">Contacto</a></li>
+            <ul class="desktop-menu" v-if="!isDropdownVisible">
+                <li><RouterLink :to="{ path: '/', hash: '#start' }">Inicio</RouterLink></li>
+                <li><RouterLink :to="{ path: '/', hash: '#exp-lab' }">Experiencia</RouterLink></li>
+                <li><RouterLink :to="{ path: '/', hash: '#about-me' }">Sobre Mí</RouterLink></li>
+                <li><RouterLink :to="{ path: '/', hash: '#projects' }">Proyectos</RouterLink></li>
+                <li><RouterLink :to="{ path: '/', hash: '#contacto' }">Contacto</RouterLink></li>
             </ul>
+            <Button type="button" v-if="isDropdownVisible" icon="pi pi-ellipsis-v" @click="toggle" aria-haspopup="true"
+                    aria-controls="overlay_menu" />
+            <Menu ref="menu" v-if="isDropdownVisible" id="overlay_menu" :model="menuOptions" :popup="true" />
         </nav>
     </header>
 </template>
@@ -39,6 +108,7 @@ nav {
     height: 60px;
 
     h2 {
+        font-size: 1.3rem;
         color: var(--nav-title-color);
     }
 

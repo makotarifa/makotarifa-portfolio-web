@@ -79,6 +79,7 @@ const props = defineProps<{
     justify-content: space-between;
     align-self: flex-end;
     height: 100%;
+    width: 100%;
 }
 
 h3 {
