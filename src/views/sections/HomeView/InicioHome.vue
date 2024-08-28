@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import Button from "primevue/button";
-</script>
+import { downloadCV } from "@/api/apiCalls.ts";
 
+</script>
 <template>
     <section id="start">
         <div class="main-content">
@@ -9,19 +10,22 @@ import Button from "primevue/button";
                 <section>
                     <h3>Full Stack Developer</h3>
                     <h1>Ángel <span class="highlight">"Mako"</span> Morando</h1>
-                    <p>Desarrollador de Software en tecnologías web y móviles.</p>
+                    <p>Tecnologías web y móvil.</p>
                 </section>
                 <section class="social-buttons">
-                    <Button label="LinkedIn" icon="pi pi-linkedin" iconPos="left" size="small"/>
-                    <Button label="GitHub" icon="pi pi-github" iconPos="left" size="small"/>
+                    <Button as="a" link href="https://www.linkedin.com/in/%C3%A1ngel-j-morando-gallego-bb1a4923a/"
+                            target="_blank" rel="noopener" label="LinkedIn" icon="pi pi-linkedin" iconPos="left"
+                            size="small" />
+                    <Button as="a" link href="https://github.com/makotarifa" target="_blank" rel="noopener"
+                            label="GitHub" icon="pi pi-github" iconPos="left" size="small" />
                 </section>
             </div>
-                <div class="img-controller right-main">
-                    <img src="@/assets/images/developer.jpg" alt="Software Developer" />
-                </div>
+            <div class="img-controller right-main">
+                <img src="@/assets/images/developer.jpg" alt="Software Developer" />
+            </div>
         </div>
         <div class="download-cv">
-            <Button label="Descargar CV" icon="pi pi-download" iconPos="left" />
+            <Button label="Descargar CV" icon="pi pi-download" iconPos="left" @click="downloadCV" />
         </div>
     </section>
 </template>
@@ -35,6 +39,10 @@ import Button from "primevue/button";
     min-height: 100vh;
 }
 
+a {
+    text-decoration: none;
+}
+
 .main-content {
     display: flex;
     justify-content: space-between;
@@ -42,7 +50,7 @@ import Button from "primevue/button";
     padding: 1rem 2rem;
     height: 100%;
 
-    > div:last-child{
+    > div:last-child {
         flex-grow: 1;
         padding: 0 1rem;
     }

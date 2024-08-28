@@ -80,7 +80,7 @@ onBeforeUnmount(() => {
                 <li><RouterLink :to="{ path: '/', hash: '#projects' }">Proyectos</RouterLink></li>
                 <li><RouterLink :to="{ path: '/', hash: '#contacto' }">Contacto</RouterLink></li>
             </ul>
-            <Button type="button" v-if="isDropdownVisible" icon="pi pi-ellipsis-v" @click="toggle" aria-haspopup="true"
+            <Button type="button" outlined v-if="isDropdownVisible" icon="pi pi-bars" @click="toggle" aria-haspopup="true"
                     aria-controls="overlay_menu" />
             <Menu ref="menu" v-if="isDropdownVisible" id="overlay_menu" :model="menuOptions" :popup="true" />
         </nav>
@@ -113,7 +113,7 @@ nav {
     }
 
 
-    nav ul {
+    ul {
         display: flex;
         justify-content: space-between;
         list-style: none;

@@ -6,7 +6,7 @@ import type { ExperienceEntity } from "@/Entities/ExperienceEntity";
 const jobExperiences = ref<ExperienceEntity[]>([
     {
         title: "Software Developer Intern",
-        image: "https://www.elestrechodigital.com/wp-content/uploads/2023/06/maersk-contenedor-arcoiris-2023-1.jpg",
+        image: "https://www.elestrechodigital.com/wp-content/uploads/2021/01/whatsapp-image-2021-01-01-at-110744.jpeg",
         company: "A.P. Moller - Maersk",
         startDate: "04/2024",
         endDate: "06/2024",

@@ -7,7 +7,7 @@ const projects: ProjectEntity[] = [
     {
         id: crypto.randomUUID(),
         title: "AyudaT Technical Test",
-        url: "https://www.google.com",
+        url: "https://github.com/makotarifa/technical-test-ayudat",
         text: "Prueba tecnica de front-end realizada para la empresa AyudaT cuyo objetivo era maquetar una landing page.",
         image: "/images/projects/ayudat.jpg",
         icons: [
@@ -75,7 +75,7 @@ const projects: ProjectEntity[] = [
     {
         id: crypto.randomUUID(),
         title: "SFLT",
-        url: "https://www.google.com",
+        url: "https://github.com/makotarifa/SFTL",
         text: "Maquetación de un front-end para una empresa naviera ficticia. Realizada en Android Studio con Kotlin.",
         image: "/images/projects/SFTL.jpg",
         icons: [
@@ -134,5 +134,12 @@ const projects: ProjectEntity[] = [
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-auto-rows: 1fr; /* Ensures all rows have the same height */
     gap: 0.5rem;
+}
+
+@media (min-width: 1100px) {
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    }
+
 }
 </style>
