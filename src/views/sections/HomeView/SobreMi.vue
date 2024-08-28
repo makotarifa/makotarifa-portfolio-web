@@ -154,7 +154,7 @@
 
                 .setup-image {
                     transition: transform 0.4s;
-                    min-width: 500px;
+                    min-width: 0;
                     position: relative;
                     display: flex;
                     justify-content: center;
@@ -169,12 +169,15 @@
                         p {
                             text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
                             rotate: -15deg;
-                            font-size: 2rem;
+                            font-size: 4vw;
+                            min-width: 140px;
                         }
 
                         .img-controller {
                             margin: 2.5rem 0 0 -2.5rem;
-                            width: 70px;
+                            min-width: 25px;
+                            max-width: 70px;
+                            width: 8vw;
                             filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8));
 
                             img {
