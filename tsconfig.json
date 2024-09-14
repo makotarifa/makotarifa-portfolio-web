@@ -12,6 +12,7 @@
     }
   ],
   "compilerOptions": {
+    "types": ["node"],
     "target": "esnext",
     "module": "es2022",
     "strict": true,

@@ -3,16 +3,18 @@ import MainSection from "@/views/sections/HomeView/InicioHome.vue";
 import SobreMi from "@/views/sections/HomeView/SobreMi.vue";
 import Proyectos from "@/views/sections/HomeView/ProyectosHome.vue";
 import ExperienciaHome from "@/views/sections/HomeView/ExperienciaHome.vue";
+import ContactoHome from "@/views/sections/HomeView/ContactoHome.vue";
 
 </script>
 
 <template>
     <main>
         <div class="home-view">
-            <main-section />
+            <main-section/>
             <experiencia-home />
             <sobre-mi />
             <proyectos />
+            <contacto-home />
         </div>
     </main>
 </template>

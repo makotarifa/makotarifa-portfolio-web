@@ -1,59 +1,60 @@
 @import './base.css';
 
 #app {
-  margin: 0 auto;
-  font-weight: normal;
+    margin: 0 auto;
+    font-weight: normal;
 }
 
 .img-controller img {
-  display: block;
-  width: 100%;
-  height: auto;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .img-controller-inverse img {
-  display: block;
-  width: auto;
-  height: 100%;
+    display: block;
+    width: auto;
+    height: 100%;
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-weight: 700;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
 }
 
 h1 {
-  font-size: 4rem;
-  line-height: 80px;
-  letter-spacing: 0.2px;
+    font-size: 4rem;
+    line-height: 80px;
+    letter-spacing: 0.2px;
 }
 
 h2 {
     font-size: 2.5rem;
+    margin-bottom: 2rem;
     line-height: 40px;
 }
 
 h3 {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
 h4 {
-  font-size: 1.5rem;
-  line-height: 30px;
+    font-size: 1.5rem;
+    line-height: 30px;
 }
 
 h5 {
-  font-size: 1.2rem;
-  line-height: 24px;
+    font-size: 1.2rem;
+    line-height: 24px;
 }
 
 p {
-  color: var(--main-text-color);
+    color: var(--main-text-color);
 }
 
-.home-view h2{
-  background: linear-gradient(to right, var(--main-gradient-text-color), var(--main-gradient-text-color-2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.home-view h2 {
+    background: linear-gradient(to right, var(--main-gradient-text-color), var(--main-gradient-text-color-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 

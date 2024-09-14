@@ -19,35 +19,35 @@ const toggle = (event: any) => {
 const menuOptions: MenuItem[] = [
     {
         label: "Inicio",
-        key: "main-section",
+        key: "start",
         command: () => {
             router.push("/#start");
         }
     },
     {
         label: "Experiencia",
-        key: "experiencia",
+        key: "exp-lab",
         command: () => {
             router.push("/#exp-lab");
         }
     },
     {
         label: "Sobre Mí",
-        key: "sobre-mi",
+        key: "about-me",
         command: () => {
             router.push("/#about-me");
         }
     },
     {
         label: "Proyectos",
-        key: "proyectos",
+        key: "projects",
         command: () => {
             router.push("/#projects");
         }
     },
     {
         label: "Contacto",
-        key: "contacto",
+        key: "contact",
         command: () => {
             router.push("/#contact");
         }
@@ -74,11 +74,9 @@ onBeforeUnmount(() => {
         <nav>
             <h2>mako</h2>
             <ul class="desktop-menu" v-if="!isDropdownVisible">
-                <li><RouterLink :to="{ path: '/', hash: '#start' }">Inicio</RouterLink></li>
-                <li><RouterLink :to="{ path: '/', hash: '#exp-lab' }">Experiencia</RouterLink></li>
-                <li><RouterLink :to="{ path: '/', hash: '#about-me' }">Sobre Mí</RouterLink></li>
-                <li><RouterLink :to="{ path: '/', hash: '#projects' }">Proyectos</RouterLink></li>
-                <li><RouterLink :to="{ path: '/', hash: '#contacto' }">Contacto</RouterLink></li>
+                <li v-for="option in menuOptions" :key="option.key">
+                    <RouterLink :to="{ path: '/', hash: '#' + option.key }">{{ option.label }}</RouterLink>
+                </li>
             </ul>
             <Button type="button" outlined v-if="isDropdownVisible" icon="pi pi-bars" @click="toggle" aria-haspopup="true"
                     aria-controls="overlay_menu" />
@@ -110,6 +108,7 @@ nav {
     h2 {
         font-size: 1.3rem;
         color: var(--nav-title-color);
+        margin-bottom: 0;
     }
 
 
