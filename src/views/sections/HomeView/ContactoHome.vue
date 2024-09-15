@@ -90,36 +90,36 @@ const onSubmit = handleSubmit(async (values) => {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+}
 
-    > div.form-container {
-        margin: 0 auto;
-        padding: 1rem 2rem;
-        width: 100%;
+.form-container {
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    width: 100%;
+}
 
-        h2 {
-            margin-bottom: 2rem;
-        }
+.form-container h2 {
+    margin-bottom: 2rem;
+}
 
-        .contact-form {
-            display: grid;
-            grid-template-areas:
-                "name email phone"
-                "subject subject subject"
-                "message message message"
-                "submit submit submit";
-            gap: 1rem;
+.contact-form {
+    display: grid;
+    grid-template-areas:
+        "name email phone"
+        "subject subject subject"
+        "message message message"
+        "submit submit submit";
+    gap: 1rem;
+}
 
-            .field {
-                display: flex;
-                flex-direction: column;
-                gap: 0.5rem;
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
-                label {
-                    font-weight: bold;
-                }
-            }
-        }
-    }
+.field label {
+    font-weight: bold;
 }
 
 #contact .name {
@@ -146,9 +146,12 @@ const onSubmit = handleSubmit(async (values) => {
     grid-area: submit;
 }
 
-@media (max-width: 768px) {
-    #contact {
-        padding: 1rem;
+@media (max-width: 900px) {
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
+
 }
 </style>
