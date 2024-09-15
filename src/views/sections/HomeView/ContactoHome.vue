@@ -24,7 +24,7 @@ const { value: number, errorMessage: numberError } = useField("number");
 const { value: subject, errorMessage: subjectError } = useField("subject");
 const { value: message, errorMessage: messageError } = useField("message");
 const isSubmitSent = ref(false);
-const firstTimeSubmit = ref(true);
+const firstTimeSubmit = ref(false);
 
 const onSubmit = handleSubmit(async (values) => {
     try {
