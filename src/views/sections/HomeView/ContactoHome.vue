@@ -5,6 +5,7 @@ import Button from "primevue/button";
 import { useForm, useField } from "vee-validate";
 import * as yup from "yup";
 import { emailCall } from "@/api/emailCall";
+import { ref } from "vue";
 
 const { handleSubmit, resetForm } = useForm({
     validationSchema: yup.object({
@@ -22,17 +23,27 @@ const { value: email, errorMessage: emailError } = useField("email");
 const { value: number, errorMessage: numberError } = useField("number");
 const { value: subject, errorMessage: subjectError } = useField("subject");
 const { value: message, errorMessage: messageError } = useField("message");
+const isSubmitSent = ref(false);
+const firstTimeSubmit = ref(true);
 
-const onSubmit = handleSubmit((values) => {
-    emailCall({
-        name: values.name,
-        email: values.email,
-        number: values.number,
-        subject: values.subject,
-        message: values.message
-    });
+const onSubmit = handleSubmit(async (values) => {
+    try {
+        await emailCall({
+            name: values.name,
+            email: values.email,
+            number: values.number,
+            subject: values.subject,
+            message: values.message
+        });
+        isSubmitSent.value = true;
+    } catch (error) {
+        console.error(error);
+        isSubmitSent.value = false;
+    }
+    firstTimeSubmit.value = true;
     resetForm();
 });
+
 </script>
 
 <template>
@@ -65,6 +76,8 @@ const onSubmit = handleSubmit((values) => {
                     <Textarea id="message" v-model="message" rows="5" />
                     <span v-if="messageError">{{ messageError }}</span>
                 </div>
+                <span v-if="isSubmitSent && firstTimeSubmit">Mensaje enviado correctamente</span>
+                <span v-if="!isSubmitSent && firstTimeSubmit">Error al enviar el mensaje</span>
                 <Button class="submit-btn" type="submit" label="Enviar" icon="pi pi-send" />
             </form>
         </div>

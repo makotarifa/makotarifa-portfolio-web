@@ -6,14 +6,21 @@ const backendEmailRoute = import.meta.env.VITE_EMAIL_ROUTE;
 
 
 export const emailCall = async (email: EmailEntity): Promise<void> => {
-    const response = await fetch(`${backendUrl}:${backendPort}${backendEmailRoute}`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(email),
-    });
-    if (!response.ok) {
-        throw new Error("Error sending email");
+    try {
+        const response = await fetch(`${backendUrl}:${backendPort}${backendEmailRoute}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(email),
+        });
+
+        if (!response.ok) {
+            throw new Error("Response was not 200 OK.");
+        }
+
+    } catch (error) {
+        console.error("Error occurred during email call", error);
+        throw error;
     }
-}
+};
