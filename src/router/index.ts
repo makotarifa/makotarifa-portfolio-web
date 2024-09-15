@@ -14,7 +14,7 @@ const router = createRouter({
         if (to.hash) {
             const element = document.querySelector(to.hash);
             if (element) {
-                console.log("Element found:", element);
+                //console.log("Element found:", element);
                 return {
                     el: to.hash,
                     behavior: "smooth"

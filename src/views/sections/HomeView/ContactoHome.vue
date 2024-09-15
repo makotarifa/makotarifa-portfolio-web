@@ -24,7 +24,6 @@ const { value: subject, errorMessage: subjectError } = useField("subject");
 const { value: message, errorMessage: messageError } = useField("message");
 
 const onSubmit = handleSubmit((values) => {
-    console.log(values);
     emailCall({
         name: values.name,
         email: values.email,
