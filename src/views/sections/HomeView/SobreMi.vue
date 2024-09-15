@@ -35,7 +35,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 
     > div {
         margin: 0 auto;
@@ -127,7 +126,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
 
         > div {
             margin: 0 auto;

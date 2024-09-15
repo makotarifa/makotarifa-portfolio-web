@@ -89,7 +89,6 @@ const onSubmit = handleSubmit(async (values) => {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 }
 
 .form-container {
@@ -119,6 +118,7 @@ const onSubmit = handleSubmit(async (values) => {
 }
 
 .field label {
+    font-size: 1.1rem;
     font-weight: bold;
 }
 

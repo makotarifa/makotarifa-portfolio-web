@@ -44,29 +44,15 @@ const jobExperiences = ref<ExperienceEntity[]>([
 </template>
 
 <style scoped>
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 #exp-lab {
     margin: 0 auto;
     padding: 2rem;
     border-radius: 8px;
-    animation: fadeIn 1s ease-in-out;
 
     h2 {
         margin-bottom: 2rem;
     }
 }
-
-
-
-
 
 .experience-cards {
     display: grid;

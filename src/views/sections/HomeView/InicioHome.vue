@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Button from "primevue/button";
-import { downloadCV } from "@/api/apiCalls.ts";
+import { downloadCV } from "@/api/apiCalls";
 
 </script>
 <template>
@@ -36,7 +36,7 @@ import { downloadCV } from "@/api/apiCalls.ts";
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh
 }
 
 a {

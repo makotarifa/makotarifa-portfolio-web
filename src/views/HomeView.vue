@@ -10,23 +10,29 @@ import ContactoHome from "@/views/sections/HomeView/ContactoHome.vue";
 <template>
     <main>
         <div class="home-view">
-            <main-section/>
-            <experiencia-home />
-            <sobre-mi />
-            <proyectos />
-            <contacto-home />
+            <main-section  />
+            <experiencia-home v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }" class="animate-duration-1000 animate-ease-in-out" />
+            <sobre-mi v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }" class="animate-duration-1000 animate-ease-in-out" />
+            <proyectos v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }" class="animate-duration-1000 animate-ease-in-out" />
+            <contacto-home v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }" class="animate-duration-1000 animate-ease-in-out" />
         </div>
     </main>
 </template>
 
 <style scoped>
 main {
-    background: radial-gradient(circle, rgb(22, 43, 156) 0%, rgb(0, 6, 19) 70%);
+    background: radial-gradient(circle, rgb(22, 43, 156) 0%, rgb(0, 6, 19) 70%) fixed;
+    background-size: cover;
 }
 
-.home-view{
+.home-view {
     margin: 0 auto;
-    max-width: 1200px;}
+    max-width: 1200px;
+}
+
+.home-view > section {
+    min-height: 100vh;
+}
 
 </style>
 
