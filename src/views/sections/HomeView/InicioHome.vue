@@ -8,7 +8,7 @@ import { downloadCV } from "@/api/apiCalls";
         <div class="main-content">
             <div class="left-main">
                 <section>
-                    <h3>Full Stack Developer</h3>
+                    <h3>Desarrollador Full Stack</h3>
                     <h1>Ángel <span class="highlight">"Mako"</span> Morando</h1>
                     <p>Tecnologías web y móvil.</p>
                 </section>
@@ -25,7 +25,7 @@ import { downloadCV } from "@/api/apiCalls";
             </div>
         </div>
         <div class="download-cv">
-            <Button label="Descargar CV" icon="pi pi-download" iconPos="left" @click="downloadCV" />
+            <Button label="Descargar CV" icon="pi pi-download" iconPos="left" @click="downloadCV"  />
         </div>
     </section>
 </template>
