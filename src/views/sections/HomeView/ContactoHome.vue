@@ -52,12 +52,4 @@ import ContactFormModal from "@/components/ContactFormModal.vue";
     transform: translateY(-3px);
 }
 
-@media (max-width: 900px) {
-    .contact-form {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-}
 </style>
