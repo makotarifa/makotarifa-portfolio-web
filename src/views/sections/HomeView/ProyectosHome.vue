@@ -6,32 +6,6 @@ import type { ProjectEntity } from "@/Entities/ProjectEntity";
 const projects: ProjectEntity[] = [
     {
         id: crypto.randomUUID(),
-        title: "AyudaT Technical Test",
-        url: "https://github.com/makotarifa/technical-test-ayudat",
-        text: "Prueba tecnica de front-end realizada para la empresa AyudaT cuyo objetivo era maquetar una landing page.",
-        image: "/images/projects/ayudat.jpg",
-        icons: [
-            {
-                name: "Vue",
-                icon: "devicon-vuejs-plain"
-            },
-            {
-                name: "TypeScript",
-                icon: "devicon-typescript-plain"
-            },
-            {
-                name: "Node.js",
-                icon: "devicon-nodejs-plain"
-            },
-            {
-                name: "Vite",
-                icon: "devicon-vite-plain"
-            }
-
-        ]
-    },
-    {
-        id: crypto.randomUUID(),
         title: "PokeTale",
         url: "https://github.com/makotarifa",
         text: "Juego con tematica de pokemon, donde el jugador se enfrenta a los pokemon salvajes en hordas y tiene que sobrevivir el mayor tiempo posible.",
@@ -95,8 +69,7 @@ const projects: ProjectEntity[] = [
 <template>
     <section id="projects">
         <div>
-            <h2>Proyectos</h2>
-            <p>Estos son algunos de los proyectos en los que he trabajado:</p>
+            <h2>Mis proyectos</h2>
             <div class="cards">
                 <project-card class="inside-card" v-for="project in projects" :key="project.id" :project="project" />
             </div>
@@ -106,18 +79,14 @@ const projects: ProjectEntity[] = [
 
 <style scoped>
 #projects {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 
     > div {
         display: flex;
         flex-direction: column;
-        gap: 30px;
-        padding: 1rem 2rem;
+        padding: 1rem 0;
         width: 100%;
     }
-
     p {
         font-size: 1.2rem;
     }
@@ -127,18 +96,12 @@ const projects: ProjectEntity[] = [
     border-radius: 50%;
 }
 
-.cards {
-    display: grid;
+#projects .cards {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-auto-rows: 1fr; /* Ensures all rows have the same height */
-    gap: 0.5rem;
+    gap: 2rem;
 }
 
-@media (min-width: 1100px) {
-    .cards {
-        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    }
 
-}
 </style>

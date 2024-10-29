@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from "vue";
-import { useRouter } from "vue-router";
 import Menu from "primevue/menu";
 import Button from "primevue/button";
-import { RouterLink } from "vue-router";
-import type { MenuItem } from "primevue/menuitem";
-
+import { RouterLink, useRouter } from "vue-router";
+import { createMenuOptions } from "@/utils/menuOptions";
 
 const router = useRouter();
+const menuOptions = createMenuOptions(router);
+
 const isDropdownVisible = ref(false);
 const maxWidthForDropdown = 930;
 const menu = ref();
@@ -16,55 +16,31 @@ const toggle = (event: any) => {
     menu.value.toggle(event);
 };
 
-const menuOptions: MenuItem[] = [
-    {
-        label: "Inicio",
-        key: "start",
-        command: () => {
-            router.push("/#start");
-        }
-    },
-    {
-        label: "Experiencia",
-        key: "exp-lab",
-        command: () => {
-            router.push("/#exp-lab");
-        }
-    },
-    {
-        label: "Sobre Mí",
-        key: "about-me",
-        command: () => {
-            router.push("/#about-me");
-        }
-    },
-    {
-        label: "Proyectos",
-        key: "projects",
-        command: () => {
-            router.push("/#projects");
-        }
-    },
-    {
-        label: "Contacto",
-        key: "contact",
-        command: () => {
-            router.push("/#contact");
-        }
-    }
-];
 
 const checkDropdownVisibility = () => {
     isDropdownVisible.value = window.innerWidth <= maxWidthForDropdown;
 };
 
+const handleScroll = () => {
+    const header = document.querySelector('header');
+    const headerHeight = header?.offsetHeight || 0;
+    if (window.scrollY > headerHeight) {
+        header?.classList.add('reduced');
+    } else {
+        header?.classList.remove('reduced');
+    }
+};
+
 onMounted(() => {
     window.addEventListener("resize", checkDropdownVisibility);
+    window.addEventListener("scroll", handleScroll);
     checkDropdownVisibility();
 });
 
 onBeforeUnmount(() => {
     window.removeEventListener("resize", checkDropdownVisibility);
+    window.removeEventListener("scroll", handleScroll);
+
 });
 
 </script>
@@ -86,28 +62,31 @@ onBeforeUnmount(() => {
 </template>
 <style scoped>
 header {
-    z-index: 1;
-    position: fixed;
+    position: sticky;
     top: 0;
-    backdrop-filter: blur(10px);
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 0 4rem;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background: #ceffef;
+    min-height: 15vh;
+}
+
+header.reduced {
+    background: rgba(206, 255, 239, 0.62);
+    min-height: 8vh; /* Altura reducida del header */
 }
 
 nav {
     width: 100%;
-    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
 
     h2 {
+        font-family: 'Eczar', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
         font-size: 1.3rem;
-        color: var(--nav-title-color);
         margin-bottom: 0;
     }
 
@@ -122,7 +101,9 @@ nav {
     }
 
     ul li a {
-        color: #fff;
+        font-size: 1.3rem;
+        color: rgba(0, 0, 0, 0.7);
+        font-weight: 600;
         text-decoration: none;
         transition: 0.4s;
         padding: 0.4rem;
@@ -137,7 +118,7 @@ nav {
         left: 0;
         width: 0;
         height: 2px;
-        background-color: var(--nav-animation-color);
+        background-color: #eab363;
         transition: width 0.4s ease-in-out;
     }
 
@@ -150,22 +131,25 @@ nav {
 
 header {
     z-index: 1;
-    position: fixed;
     top: 0;
     backdrop-filter: blur(10px);
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 0 4rem;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 
 
 @media (max-width: 930px) {
     header {
-        position: sticky;
         padding: 0 1.5rem;
+        min-height: 15vh;
+    }
+
+    header.reduced {
+        background: rgba(206, 255, 239, 0.62);
+        min-height: 15vh;
     }
 }
 </style>
