@@ -35,19 +35,19 @@ const jobExperiences = ref<ExperienceEntity[]>([
 
 <template>
     <section id="exp-lab">
-        <h2>Experiencia Laboral</h2>
-        <div v-if="jobExperiences.length" class="experience-cards">
-            <experience-card v-for="job in jobExperiences" :key="job.title" :job="job" />
+        <div class="exp-lab-cont">
+            <h2>Experiencia Laboral</h2>
+            <div v-if="jobExperiences.length" class="experience-cards">
+                <experience-card v-for="job in jobExperiences" :key="job.title" :job="job" />
+            </div>
+            <p v-else>No job experiences available.</p>
         </div>
-        <p v-else>No job experiences available.</p>
     </section>
 </template>
 
 <style scoped>
 #exp-lab {
     margin: 0 auto;
-    padding: 2rem;
-    border-radius: 8px;
 
     h2 {
         margin-bottom: 2rem;
@@ -55,11 +55,10 @@ const jobExperiences = ref<ExperienceEntity[]>([
 }
 
 .experience-cards {
-    display: grid;
+    display: flex;
     width: 100%;
-    gap: 0.5rem;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(500px, auto); /* Increase the minimum height of each row */
+    gap: 2rem;
+    flex-direction: column;
 }
 
 @media (max-width: 768px) {

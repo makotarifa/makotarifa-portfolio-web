@@ -28,9 +28,10 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 2rem;
-    line-height: 40px;
+    color: #403930;
+
 }
 
 h3 {
@@ -39,22 +40,14 @@ h3 {
 
 h4 {
     font-size: 1.5rem;
-    line-height: 30px;
 }
 
 h5 {
     font-size: 1.2rem;
-    line-height: 24px;
 }
 
 p {
     color: var(--main-text-color);
-}
-
-.home-view h2 {
-    background: linear-gradient(to right, var(--main-gradient-text-color), var(--main-gradient-text-color-2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 

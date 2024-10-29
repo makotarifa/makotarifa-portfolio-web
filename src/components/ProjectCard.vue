@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Button from "primevue/button";
-import Card from "primevue/card";
 import type { ProjectEntity } from "@/Entities/ProjectEntity";
 
 const props = defineProps<{
@@ -16,70 +15,138 @@ const navigateToProject = () => {
 </script>
 
 <template>
-    <Card id="mt-card"
-          :style="`background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(${props.project.image}) center/cover`">
-        <template #title>
-            <div>
-                <h5>{{ project.title }}</h5>
-            </div>
-        </template>
-        <template #content>
+    <div id="mt-card">
+        <div class="left-side">
             <div class="card-content">
+                <h5>{{ project.title }}</h5>
                 <p>{{ project.text }}</p>
             </div>
-        </template>
-        <template #footer>
             <div class="card-footer">
                 <div class="tech-icons">
                     <i :title="icon.name" v-for="icon in project.icons" :key="icon.name" :class="icon.icon"></i>
                 </div>
                 <Button class="pj-button" :label="'Ver proyecto'" @click="navigateToProject" size="small" />
             </div>
-        </template>
-    </Card>
+        </div>
+        <div class="right-side">
+            <img :src="project.image" alt="Project image"/>
+        </div>
+    </div>
 </template>
 
 <style scoped>
 #mt-card {
-    border: 1px solid var(--card-border);
-    transition: box-shadow 0.3s ease, border 0.3s ease;
+    border-radius: 1rem;
+    background-color: #fff;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Asegura que el footer esté en la parte inferior */
-
-
-    .tech-icons {
-        display: flex;
-        gap: 10px;
-
-        i {
-            font-size: 1.5rem;
-            filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8));
-        }
-    }
-
-    .card-content {
-        height: 15vh;
-        min-height: 200px;
-    }
-
-    .card-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .pj-button {
-        max-width: 150px;
-    }
-
-    h5, p {
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
-    }
+    max-height: 20rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+#mt-card .right-side, #mt-card .left-side{
+    width: 50%;
+}
+
+#mt-card .right-side img {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+
+#mt-card .left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#mt-card .left-side .card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#mt-card .tech-icons {
+    display: flex;
+    gap: 10px;
+
+}
+
+#mt-card .tech-icons i {
+    font-size: 1.5rem;
+    color: rgb(31 41 55);
+}
+
+#mt-card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mt-card .pj-button {
+    max-width: 150px;
+}
+
+#mt-card h5 {
+    color: #333333;
+    font-size: 1.5rem;
+}
+
+#mt-card p {
+    font-size: 1rem;
+}
+
+
 #mt-card:hover {
-    box-shadow: var(--card-shadow-hover);
     border-color: var(--card-border-hover);
+}
+
+.card-footer .p-button {
+    color: #fff;
+    background-color: #006666;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    border: 0.2rem solid #006666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-footer .p-button:hover{
+    color: #006666;
+    border: 0.2rem solid #006666;
+    background-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 780px) {
+    #mt-card {
+        flex-direction: column;
+        max-height: max-content;
+
+    }
+
+    #mt-card .right-side {
+        width: 100%;
+        height: 15rem;
+    }
+
+    #mt-card .right-side img {
+        border-top-right-radius: 0;
+        height: 15rem;
+        border-bottom-left-radius: 1rem;
+
+    }
+
+    #mt-card .left-side {
+        width: 100%;
+        padding: 1rem;
+    }
 }
 </style>
