@@ -23,8 +23,7 @@ const checkDropdownVisibility = () => {
 
 const handleScroll = () => {
     const header = document.querySelector('header');
-    const headerHeight = header?.offsetHeight || 0;
-    if (window.scrollY > headerHeight) {
+    if (window.scrollY > 0) {
         header?.classList.add('reduced');
     } else {
         header?.classList.remove('reduced');
@@ -70,12 +69,16 @@ header {
     align-items: center;
     padding: 0 4rem;
     background: #ceffef;
-    min-height: 15vh;
+    max-height: 140px;
+    height: 100vh;
+    transition: max-height 0.5s ease-in-out, background 0.5s ease-in-out;
+
 }
 
 header.reduced {
     background: rgba(206, 255, 239, 0.62);
-    min-height: 8vh; /* Altura reducida del header */
+    max-height: 75px;
+    transition: max-height 0.5s ease-in-out, background 0.5s ease-in-out;
 }
 
 nav {
@@ -144,12 +147,10 @@ header {
 @media (max-width: 930px) {
     header {
         padding: 0 1.5rem;
-        min-height: 15vh;
     }
 
     header.reduced {
         background: rgba(206, 255, 239, 0.62);
-        min-height: 15vh;
     }
 }
 </style>

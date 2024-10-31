@@ -5,10 +5,15 @@ import AppFooter from "@/views/AppFooter.vue";
 </script>
 
 <template>
-    <app-header />
-    <RouterView />
-    <app-footer />
+    <div class="app-div">
+        <app-header />
+        <RouterView />
+        <app-footer />
+    </div>
 </template>
 
 <style scoped>
+.app-div {
+    background-color: #ceffef;
+}
 </style>
