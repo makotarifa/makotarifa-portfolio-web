@@ -7,11 +7,11 @@
             <h2>Sobre Mi</h2>
             <div class="content">
                 <article>
-                    <p>Amante de la informática desde pequeño, me dedicaba a trastear con los ordenadores de mi casa y a
-                        investigar cómo funcionaban las cosas. Con el tiempo, me gradué como tecnico de Sistema
-                        Microinformáticos y Redes, pero decidí
-                        seguir estudiando hasta graduarme en la FP Superior de Desarrollo de Aplicaciones
-                        Multiplataformas. Actualmente me dedico al desarrollo de software tanto web como móvil.</p>
+                    <p><i>Desde una edad temprana</i>, he sido un apasionado de la informática, dedicando tiempo a explorar y comprender el funcionamiento de los ordenadores.</p>
+                    <p>A los 20 años, obtuve la titulación de <b>Técnico en Sistemas Microinformáticos y Redes</b>, lo que me permitió adquirir una sólida base técnica.</p>
+                    <p>Motivado por el deseo de aumentar mis conocimientos y habilidades, decidí continuar mi formación y me gradué en la <b>Formación Profesional Superior en Desarrollo de Aplicaciones Multiplataformas</b>.</p>
+                    <p>En la actualidad, me especializo en el desarrollo de software para entornos web y móviles, aplicando tecnologías como <b>Vue</b> y <b>Spring Boot</b>.</p>
+                    <p>Estoy comprometido con el <i>aprendizaje continuo</i> y la mejora de mis competencias, lo que me permite abordar desafíos complejos y contribuir eficazmente a proyectos innovadores.</p>
                 </article>
                 <div class="setup-image">
                     <div class="img-controller main-image">
@@ -28,6 +28,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    b {
+        font-weight: 600;
+    }
 
     > div {
         margin: 0 auto;
