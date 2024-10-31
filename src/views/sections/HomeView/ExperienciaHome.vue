@@ -10,7 +10,7 @@ const jobExperiences = ref<ExperienceEntity[]>([
         company: "A.P. Moller - Maersk",
         startDate: "04/2024",
         endDate: "06/2024",
-        description: "Durante mi periodo de practicas para obtener mi titulacion de Desarrollo de Aplicaciones Multiplataforma, tuve la oportunidad de trabajar en el departamento de programación de Maersk, donde desarrolle una aplicacion web asistente para la gestión de contenedores."
+        description: "Durante mis prácticas para obtener la titulación en Desarrollo de Aplicaciones Multiplataforma, tuve la oportunidad de integrarme al equipo ASTRA en el departamento de programación de Maersk, donde desarrollé una aplicación web para la gestión asistida de contenedores, adquiriendo experiencia en tecnologías como Vue y Spring Boot."
     },
     {
         title: "Junior System Administrator",
@@ -18,15 +18,15 @@ const jobExperiences = ref<ExperienceEntity[]>([
         company: "FRS Iberia S.L.U.",
         startDate: "06/2023",
         endDate: "09/2023",
-        description: "En el descanso entre el primer y segundo año de mi ciclo formativo de grado superior, volví a trabajar en el departamento de IT de FRS Iberia, donde me encargué de la administración de sistemas y redes."
+        description: "Durante el receso entre el primer y segundo año de mi ciclo formativo de grado superior, retomé mi labor en el departamento de IT de FRS Iberia, donde me encargaba de la administración de sistemas, redes y equipos en distintas oficinas, puntos de venta y buques de la empresa. Además, participé activamente en el montaje completo de los sistemas informáticos del buque <i>Poniente Jet</i>."
     },
     {
         title: "IT Assistant",
         image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/e9/34/7b/tarifa-jet.jpg?w=1200&h=900&s=1",
         company: "FRS Iberia S.L.U.",
-        startDate: "06/2022",
+        startDate: "03/2022",
         endDate: "09/2022",
-        description: "Tras obtener mi titulación de Sistema Microinformáticos y Redes, trabajé en el departamento de IT de FRS Iberia, donde me encargue de la resolución de incidencias, mantenimiento de equipos y redes."
+        description: "Tras obtener mi titulación en Sistemas Microinformáticos y Redes, realicé mis prácticas en FRS Iberia, donde posteriormente me uní al departamento de IT. Allí asumí la responsabilidad de la resolución de incidencias y el mantenimiento de equipos y redes en las oficinas, puntos de venta y buques de la empresa."
     }
 
 ]);

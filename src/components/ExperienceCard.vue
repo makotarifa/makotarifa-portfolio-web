@@ -29,7 +29,7 @@ const props = defineProps<{
                     <p>-</p>
                     <Tag class="card-tag" :value="job.endDate" severity="info" />
                 </div>
-                <p>{{ job.description }}</p>
+                <p v-html="job.description"></p>
             </div>
         </div>
     </div>
